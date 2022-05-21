@@ -1,14 +1,11 @@
-const nombre = 'Eliseo'
-const edad = 21
+// ejercicos de javascript
 
-const desarrollador = true
+// Crea los siguientes archivos JS:
 
-const fechaNacimiento = new Date('December 22, 2000')
+// - factorial-for.js -> Este archivo debe calcular el factorial de 10 utilizando un solo bucle for
 
-const favoriteBook = {
-  title: 'Eloquent JavaScript 3rd Edition',
-  autor: 'Marijn Haverbeke',
-  date: new Date('2018'),
-  url: 'https://eloquentjavascript.net/'
-}
-console.log(nombre, edad, desarrollador, fechaNacimiento, favoriteBook)
+// - factorial-while.js -> Este archivo debe calcular el factorial de 10 utilizando un bucle while
+
+// - factorial-break.js -> Este archivo debe calcular el factorial de 10 utilizando un bucle while, una bifurcación if y una sentencia break
+
+// npm run start > para correr archivos
