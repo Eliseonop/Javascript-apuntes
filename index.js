@@ -1,37 +1,24 @@
 // Crea un archivo JS que contenga las siguientes líneas
 
-// - Una cadena de texto con tu Nombre
+// - Una variable que contenga tu altura en centímetros (entero)
 
-// - Otra cadena de texto con tu Apellido
+// - Una variable que contenga tu altura en metros (número de coma flotante)
 
-// - Una cadena de texto que se llame "estudiante" concatenando tu Nombre y tu Apellido con un espacio entre medias
+// - Una variable que contenga tu peso en kilogramos (número de coma flotante)
 
-// - Una cadena de texto que se llame "estudianteMayus" que contenga la cadena estudiante pero todo en mayúsculas
+// - Una variable que contenga tu altura en metros redondeada hacia arriba
 
-// - Una cadena de texto que se llame "estudianteMinus" que contenga la cadena estudiante pero todo en minúsculas
+// - Una variable que contenga tu peso en kilogramos redondeado hacia abajo
 
-// - Una variable que contenga el número de letras de la cadena "estudiante" contando los espacios
+// - Una variable que contenga si "el máximo valor que se puede obtener en Javascript + 1" es igual al máximo valor que se puede obtener en Javascript
 
-// - Una variable que contenga la primera letra del Nombre
+let alturaCentimetros = 171
+let alturaMetros = alturaCentimetros / 100
+let pesoKilogramos = 65.3
 
-// - Otra variable que contenga la última letra del Apellido
-
-// - Una cadena de texto que elimine los espacios de la variable "estudiante"
-
-// - Una variable booleana que diga si el Nombre está contenido en la variable "estudiante"
-
-const nombre = 'Eliseo'
-const apellido = 'Falcon'
-
-const estudiante = nombre + ' ' + apellido
-const estudianteMayus = estudiante.toUpperCase()
-
-const estudianteMinus = estudiante.toLowerCase()
-const numeroEstudiante = estudiante.length
-const primeraLetra = estudiante.charAt(0)
-
-const ultimaLetraApellido = apellido.charAt(apellido.length - 1)
-
-const estudianteSinEspacios = estudiante.replace(/\s/g, '')
-
-const estaNombreEnEstudiante = estudiante.includes(nombre)
+const alturaMetrosRedondeado = Math.ceil(alturaMetros)
+const pesoKilogramosRedondeado = Math.floor(pesoKilogramos)
+const maximoValor = Number.MAX_VALUE
+const maximoValorMasUno = maximoValor + 1
+const iguales = maximoValor === maximoValorMasUno
+console.log(iguales) // true
