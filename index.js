@@ -1,24 +1,37 @@
 // Crea un archivo JS que contenga las siguientes líneas
 
-// - Una variable que contenga tu altura en centímetros (entero)
+// - Una variable que contenga la lista de la compra (mínimo 5 elementos)
 
-// - Una variable que contenga tu altura en metros (número de coma flotante)
+// - Modifica la lista de la compra y añádele "Aceite de Girasol"
 
-// - Una variable que contenga tu peso en kilogramos (número de coma flotante)
+// - Vuelve a modificar la lista de la compra eliminando "Aceite de Girasol"
 
-// - Una variable que contenga tu altura en metros redondeada hacia arriba
+const listaCompra = ['Leche', 'Huevos', 'Pan', 'Carne', 'Aceite', 'Crema']
 
-// - Una variable que contenga tu peso en kilogramos redondeado hacia abajo
+listaCompra.push('Aceite de Girasol')
 
-// - Una variable que contenga si "el máximo valor que se puede obtener en Javascript + 1" es igual al máximo valor que se puede obtener en Javascript
+listaCompra.pop()
 
-let alturaCentimetros = 171
-let alturaMetros = alturaCentimetros / 100
-let pesoKilogramos = 65.3
+// - Una lista de tus 3 películas favoritas (objetos con propiedades: titulo, director, fecha)
+const listaPeliculas = [
+  { titulo: 'Volver al futuro', director: 'Robert Zemeckis', fecha: '1985' },
+  { titulo: 'Destino Final', director: 'Ridley Scott', fecha: '2000' },
+  { titulo: 'Avencer', director: 'Christopher Nolan', fecha: '2012' }
+]
 
-const alturaMetrosRedondeado = Math.ceil(alturaMetros)
-const pesoKilogramosRedondeado = Math.floor(pesoKilogramos)
-const maximoValor = Number.MAX_VALUE
-const maximoValorMasUno = maximoValor + 1
-const iguales = maximoValor === maximoValorMasUno
-console.log(iguales) // true
+// - Una nueva lista que contenga las películas posteriores al 1 de enero de 2010 (utilizando filter)
+const listaPeliculas2 = listaPeliculas.filter(pl => pl.fecha > 2010)
+console.log(listaPeliculas2)
+
+// - Una nueva lista que contenga los directores de la lista de películas original (utilizando map)
+const listaDirectores = listaPeliculas.map(pl => pl.director)
+console.log(listaDirectores)
+// - Una nueva lista que contenga los títulos de la lista de películas original (utilizando map)
+const listaTitulos = listaPeliculas.map(pl => pl.titulo)
+console.log(listaTitulos)
+// - Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando concat)
+const listaDirectoresTitulos = listaDirectores.concat(listaTitulos)
+console.log(listaDirectoresTitulos)
+// - Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando el factor de propagación)
+const nuevaLista = [...listaDirectores, ...listaTitulos]
+console.log(nuevaLista)
