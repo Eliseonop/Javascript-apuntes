@@ -11,10 +11,24 @@ function sinParametros () {
 }
 
 function asincrona () {
-  setTimeout(() => {
-    console.log('Hola soy una promesa')
-  }, 5000)
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve()
+    }, 1000)
+  })
 }
+
 asincrona()
-  .then(() => console.log('Terminó la promesa'))
+  .then(() => console.log('Se cumplio la promesa'))
   .catch(() => console.log('Algo salió mal'))
+
+function * generarIndicesPares () {
+  let i = 0
+  while (true) {
+    i = i + 2
+    yield i
+  }
+}
+const generar = generarIndicesPares()
+console.log(generar.next().value)
+console.log(generar.next().value)
