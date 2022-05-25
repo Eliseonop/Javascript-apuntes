@@ -1,37 +1,20 @@
 // Crea un archivo JS que contenga las siguientes líneas
 
-// - Una variable que contenga la lista de la compra (mínimo 5 elementos)
+// - Una función sin parámetros que devuelva siempre "true"
 
-// - Modifica la lista de la compra y añádele "Aceite de Girasol"
+// - Una función asíncrona que utilice un setTimeout y pase por consola un "Hola soy una promesa" 5 segundos después de haberse ejecutado
 
-// - Vuelve a modificar la lista de la compra eliminando "Aceite de Girasol"
+// - Una función generadora de índices pares automáticos
 
-const listaCompra = ['Leche', 'Huevos', 'Pan', 'Carne', 'Aceite', 'Crema']
+function sinParametros () {
+  return true
+}
 
-listaCompra.push('Aceite de Girasol')
-
-listaCompra.pop()
-
-// - Una lista de tus 3 películas favoritas (objetos con propiedades: titulo, director, fecha)
-const listaPeliculas = [
-  { titulo: 'Volver al futuro', director: 'Robert Zemeckis', fecha: '1985' },
-  { titulo: 'Destino Final', director: 'Ridley Scott', fecha: '2000' },
-  { titulo: 'Avencer', director: 'Christopher Nolan', fecha: '2012' }
-]
-
-// - Una nueva lista que contenga las películas posteriores al 1 de enero de 2010 (utilizando filter)
-const listaPeliculas2 = listaPeliculas.filter(pl => pl.fecha > 2010)
-console.log(listaPeliculas2)
-
-// - Una nueva lista que contenga los directores de la lista de películas original (utilizando map)
-const listaDirectores = listaPeliculas.map(pl => pl.director)
-console.log(listaDirectores)
-// - Una nueva lista que contenga los títulos de la lista de películas original (utilizando map)
-const listaTitulos = listaPeliculas.map(pl => pl.titulo)
-console.log(listaTitulos)
-// - Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando concat)
-const listaDirectoresTitulos = listaDirectores.concat(listaTitulos)
-console.log(listaDirectoresTitulos)
-// - Una nueva lista que concatene la lista de directores y la lista de los títulos (utilizando el factor de propagación)
-const nuevaLista = [...listaDirectores, ...listaTitulos]
-console.log(nuevaLista)
+function asincrona () {
+  setTimeout(() => {
+    console.log('Hola soy una promesa')
+  }, 5000)
+}
+asincrona()
+  .then(() => console.log('Terminó la promesa'))
+  .catch(() => console.log('Algo salió mal'))
