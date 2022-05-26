@@ -1,34 +1,26 @@
-// Crea un archivo JS que contenga las siguientes líneas
+const winston = require('winston')
 
-// - Una función sin parámetros que devuelva siempre "true"
+const logger = winston.createLogger({
+  level: 'debug',
+  format: winston.format.json(),
+  defaultMeta: { service: 'user-service' },
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+})
+// una función que devuelva un error con un mensaje personalizado
 
-// - Una función asíncrona que utilice un setTimeout y pase por consola un "Hola soy una promesa" 5 segundos después de haberse ejecutado
+// - Registra el error en un archivo a través de un try...catch
 
-// - Una función generadora de índices pares automáticos
-
-function sinParametros () {
-  return true
-}
-
-function asincrona () {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve()
-    }, 1000)
-  })
-}
-
-asincrona()
-  .then(() => console.log('Se cumplio la promesa'))
-  .catch(() => console.log('Algo salió mal'))
-
-function * generarIndicesPares () {
-  let i = 0
-  while (true) {
-    i = i + 2
-    yield i
+function logError (error) {
+  try {
+    logger.error(error)
+  } catch (error) {
+    console.info('Error en el log')
   }
 }
-const generar = generarIndicesPares()
-console.log(generar.next().value)
-console.log(generar.next().value)
+logError('Error Error Error cuidado')
+
+// logger.info('Hello world')
+// logger.error('Oh noes!')

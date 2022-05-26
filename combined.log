@@ -1,0 +1,8 @@
+{"level":"info","message":"Hello world","service":"user-service"}
+{"level":"error","message":"Oh noes!","service":"user-service"}
+{"level":"info","message":"Hello world","service":"user-service"}
+{"level":"error","message":"Oh noes!","service":"user-service"}
+{"level":"error","message":"Error","service":"user-service"}
+{"level":"info","message":"Hello world","service":"user-service"}
+{"level":"error","message":"Oh noes!","service":"user-service"}
+{"level":"error","message":"Error Error Error cuidado","service":"user-service"}
