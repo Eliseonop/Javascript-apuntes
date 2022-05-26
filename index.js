@@ -1,26 +1,22 @@
-const winston = require('winston')
+import { multiplica, suma } from './controller.js'
+import chalk from 'chalk'
 
-const logger = winston.createLogger({
-  level: 'debug',
-  format: winston.format.json(),
-  defaultMeta: { service: 'user-service' },
-  transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
-})
-// una función que devuelva un error con un mensaje personalizado
+const Suma1 = suma(1, 2)
 
-// - Registra el error en un archivo a través de un try...catch
+const Suma2 = suma(4, 5)
 
-function logError (error) {
-  try {
-    logger.error(error)
-  } catch (error) {
-    console.info('Error en el log')
-  }
-}
-logError('Error Error Error cuidado')
+const green = chalk.bold.green
+const magenta = chalk.bold.magenta
 
-// logger.info('Hello world')
-// logger.error('Oh noes!')
+console.log(magenta('Suma1: '), green(Suma1))
+console.log(green(`Suma1: ${Suma2}`))
+
+// axios
+//   .get('https://pokeapi.co/api/v2/pokemon/ditto')
+//   .then(response => {
+//     console.log('Success')
+//     console.log(response.data)
+//   })
+//   .catch(error => {
+//     console.log(error)
+//   })
