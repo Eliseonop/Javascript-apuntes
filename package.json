@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/Eliseonop/Javascript-apuntes/issues"
   },
-  "homepage": "https://github.com/Eliseonop/Javascript-apuntes#readme",
-  "dependencies": {
-    "http-server": "^14.1.0"
-  }
+  "homepage": "https://github.com/Eliseonop/Javascript-apuntes#readme"
 }
