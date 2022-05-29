@@ -4,32 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drag and drop</title>
+    <title>Maps web</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="seccion">
-        <p class="parrafo" draggable="true" id="parrafo-1">1. Primero</p>
-        <p class="parrafo" draggable="true" id="parrafo-2">2. Segundo</p>
-        <p class="parrafo" draggable="true" id="parrafo-3">3. Tercero</p>
-        <p class="parrafo" draggable="true" id="parrafo-4">4. Cuarto</p>
-      </div>
-      <div class="seccion">
-        <p class="parrafo" draggable="true" id="parrafo-3">3. Tercero</p>
-        <p class="parrafo" draggable="true" id="parrafo-4">4. Cuarto</p>
-        <p class="parrafo" draggable="true" id="parrafo-1">1. Primero</p>
-        <p class="parrafo" draggable="true" id="parrafo-2">2. Segundo</p>
-      </div>
-      <div class="papelera" draggable="true">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSMWeEC0tULzOjfWFAOdOHjUw9WjXhBDbirg&usqp=CAU"
-          alt=""
-        />
-      </div>
-    </div>
-    <div class="imagen-fantasma">Que onda andas un poco empalmadito</div>
-    <!-- script -->
+    <h1>Mi maps</h1>
+    <div id="map"></div>
+    <!-- Scripts-->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
